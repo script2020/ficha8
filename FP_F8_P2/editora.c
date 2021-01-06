@@ -28,7 +28,7 @@ void listarEditora(Livros livros) {
     if (livros.contador > 0) {
         int i;
         for (i = 0; i < livros.contador; i++) {
-            imprimirLivro(livros.livros[i]);
+            imprimirEditora(livros.livros[i]);
         }
     } else {
         puts(ERRO_LISTA_VAZIA);

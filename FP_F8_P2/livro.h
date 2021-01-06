@@ -70,7 +70,7 @@ typedef struct {
     Livro livros[MAX_LIVROS];
 } Livros;
 
-int inserirLivro(Livro *livro);
+int inserirLivro(Livro *livros);
 void listarLivros(Livro livro);
 
 #endif /* LIVRO_H */
