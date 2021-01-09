@@ -15,8 +15,8 @@
 #define AUTOR_H
 
 void inserirAutor(Livros *livros);
-
-void listarAutores(Livros *livros);
+void imprimirAutor(Livro livro);
+void listarAutores(Livros livros);
 
 #endif /* AUTOR_H */
 

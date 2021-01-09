@@ -23,9 +23,7 @@
 #define MAX_COMP_STRINGS        50
 #define MSG_OBTER_TITULO        "Insira o titulo do livro: "
 #define MSG_OBTER_NOME_EDITORA  "Insira o nome da editora: "
-#define MSG_OBTER_NOME_AUTOR    "Insira o nome do autor: "
 #define MSG_OBTER_MORADA        "Insira a morada da editora: "
-#define MSG_OBTER_WEB           "Insira a página web da autor: "
 
 #define MAX_IBSN_LIVRO          17
 #define MSG_OBTER_IBSN          "Insira o IBSN do livro: "
@@ -70,8 +68,11 @@ typedef struct {
     Livro livros[MAX_LIVROS];
 } Livros;
 
-int inserirLivro(Livro *livros);
-void listarLivros(Livro livro);
+int inserirLivro(Livros *livros);
+
+void listarLivros(Livros livro);
+
+void carregarLivro(Livros *livros, char* ficheiro);
 
 #endif /* LIVRO_H */
 

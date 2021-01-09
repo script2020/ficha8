@@ -15,24 +15,28 @@
  * 
  */
 
-/*
 void inserirAutor(Livros *livros){
-    lerString(livros->livros[livros->contador].autores.nome, MAX_COMP_STRINGS, MSG_OBTER_NOME_AUTOR);
-    lerString(livros->livros[livros->contador].autores.paginaWeb, MAX_COMP_STRINGS, MSG_OBTER_WEB);    
+    int i,nAutorIns;
+    
+    nAutorIns = obterInteiro(1, 5, "Quantos autores tem este livro?");
+    
+    for(i = 0;i < nAutorIns;i++){
+        lerString(livros->livros[livros->contador].autores[i].nome, MAX_COMP_STRINGS, "Insira o nome do autor: ");
+        lerString(livros->livros[livros->contador].autores[i].pagWeb, MAX_COMP_STRINGS, "Insira a página web do autor: ");    
+    }
 }
 
 void imprimirAutor(Livro livro) {
-    printf("\n %s %s",livro.autores.nome,livro.autores.paginaWeb);
+    printf("\n %s",livro.autores[0].nome);
 }
 
 void listarAutores(Livros livros) {
     if (livros.contador > 0) {
         int i;
         for (i = 0; i < livros.contador; i++) {
-            imprimirLivro(livros.livros[i]);
+            imprimirAutor(livros.livros[i]);
         }
     } else {
         puts(ERRO_LISTA_VAZIA);
     }
 }
-*/

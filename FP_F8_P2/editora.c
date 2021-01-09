@@ -24,7 +24,7 @@ void imprimirEditora(Livro livro) {
     printf("\n %s %s",livro.infoEditora.nome,livro.infoEditora.morada);
 }
 
-void listarEditora(Livros livros) {
+void listarEditoras(Livros livros) {
     if (livros.contador > 0) {
         int i;
         for (i = 0; i < livros.contador; i++) {

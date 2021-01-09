@@ -8,6 +8,7 @@
 #include <stdlib.h>
 
 #include "livro.h"
+#include "autor.h"
 #include "editora.h"
 #include "input.h"
 #include "logs.h"
@@ -23,7 +24,7 @@ int main(){
     
     Livros livros = {.contador = 0};
     
-    void carregarLivro(&livros, LIVROS_DB_FILE);
+    carregarLivro(&livros, LIVROS_DB_FILE);
     
     do{
         puts("BIBLIOTECA - BASE DE DADOS");
@@ -35,7 +36,7 @@ int main(){
         puts("0 - Sair");
         puts("-----------------");
         
-        printf("\Nº Livros: %d/%d", livros.contador, MAX_LIVROS);
+        printf("\nNº Livros: %d/%d \n", livros.contador, MAX_LIVROS);
 
         puts("Insira a sua opção:");
         scanf("%d", &op);

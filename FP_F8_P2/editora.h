@@ -16,7 +16,7 @@
 
 void inserirEditora(Livros *livros);
 
-void listarEditoras(Livros *livros);
+void listarEditoras(Livros livros);
 
 #endif /* EDITORA_H */
 

@@ -24,6 +24,9 @@ int inserirLivro(Livros *livros){
     livros->livros[livros->contador].dataPub.mes = obterInteiro(MIN_MES, MAX_MES, OBTER_MES_NASC);
     livros->livros[livros->contador].dataPub.ano = obterInteiro(MIN_ANO, MAX_ANO, OBTER_ANO_NASC);
     
+    lerString(livros->livros[livros->contador].tipos, MAX_COMP_STRINGS, "Indique o tipo do livro - FICCAO,TECNICO,ROMANCE,ESTUDO");
+
+/*
     switch (livros->livros[livros->contador].tipos){
         case FICCAO:
             livros->livros[livros->contador].tipos = obterChar("FICCAO");
@@ -35,23 +38,23 @@ int inserirLivro(Livros *livros){
             livros->livros[livros->contador].tipos = obterChar("ROMANCE");
             break;
         case ESTUDO:
-            livros->livros[livros->contador].tipos  = obterChar("ESTUDO");
+            livros->livros[livros->contador].tipos = obterChar("ESTUDO");
             break;
+        default:
+            puts("ERRRO");
     }   
-     
-/*
-    inserirEditora(Livros *livros);
-    
-    inserirAutor(Livros *livros);
 */
-
+     
+    inserirEditora(&livros);
+    
+    inserirAutor(&livros);
     
     return livros->contador++;
 
 }
 
 void imprimirLivro(Livro livro) {
-    printf("\n %s %s %d-%d-%d",
+    printf("\n %s %s %d-%d-%d \n",
             livro.ISBN,
             livro.titulo, 
             livro.dataPub.dia, 
